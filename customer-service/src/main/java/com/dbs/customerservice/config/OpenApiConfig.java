@@ -1,0 +1,26 @@
+package com.dbs.customerservice.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+
+
+@Configuration
+public class OpenApiConfig {
+
+
+    @Bean
+    OpenAPI customerServiceOpenAPI() 
+    {
+
+        return new OpenAPI()
+                .info(
+                    new Info()
+                    .title("Customer Service API")
+                    .description("Customer management APIs for DBS Financial Platform")
+                    .version("1.0")
+                );
+    }
+}

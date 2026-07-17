@@ -1,0 +1,42 @@
+server:
+  port: 8081
+
+
+spring:
+  application:
+    name: customer-service
+
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer_db
+    username: root
+    password: Rahul2140@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+# Application Logging
+logging:
+  level:
+    root: INFO
+
+    # Your package logs
+    com:
+      dbs:
+        customerservice: DEBUG
+
+  # Save logs into file
+  file:
+    name: customer-service.log

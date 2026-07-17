@@ -1,0 +1,5 @@
+com\dbs\portfolio_service\repository\PortfolioRepositoryTest.class
+com\dbs\portfolio_service\repository\PortfolioRepository.class
+com\dbs\portfolio_service\exception\GlobalExceptionHandlerTest.class
+com\dbs\portfolio_service\service\PortfolioServiceImplTest.class
+com\dbs\portfolio_service\controller\PortfolioControllerTest.class

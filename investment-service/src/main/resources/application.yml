@@ -1,0 +1,39 @@
+server:
+  port: 8083
+
+
+spring:
+
+  application:
+    name: investment-service
+
+
+  datasource:
+
+    url: jdbc:mysql://localhost:3306/investment_db
+
+    username: root
+
+    password: root
+
+
+  jpa:
+
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+
+  kafka:
+
+    bootstrap-servers: localhost:9092
+
+
+eureka:
+
+  client:
+
+    service-url:
+
+      defaultZone: http://localhost:8761/eureka
